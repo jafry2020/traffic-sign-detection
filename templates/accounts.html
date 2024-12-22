@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Traffic Sign Detection - Accounts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homes">Home</a></li>
+                <li><a href="setting">Settings</a></li>
+                <li><a class="active" href="account">Accounts</a></li>
+                <li><a href="log">Logs</a></li>
+                <li><a href="">Sign Out</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome, John Doe</h1>
+                <p>Vehicle Number: ABC123</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-box">
+                <h3>Camera Feed</h3>
+                <img class="feature-img" src="{{ url_for('static', filename='images/camerafeed.jpg') }}" alt="Camera Feed">
+                <p>Live video feed from the built-in camera.</p>
+                <button class="btn" onclick="window.location.href='camera_feeds'">Open Camera</button>
+            </div>
+            <div class="feature-box">
+                <h3>Sightings</h3>
+                <img class="feature-img" src="{{ url_for('static', filename='images/reports.jpg') }}" alt="Sightings">
+                <p>View all the recent traffic sign sightings here.</p>
+                <button class="btn" onclick="window.location.href='homes'">View Reports</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Real-time Traffic Sign Detection for software project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

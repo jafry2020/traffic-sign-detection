@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Traffic Sign Detection - Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homes">Home</a></li>
+                <li><a class="active" href="setting">Settings</a></li>
+                <li><a href="account">Accounts</a></li>
+                <li><a href="log">Logs</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Settings</h1>
+                <p>Customize as you like it</p>
+            </div>
+        </section>
+        <section class="features">
+            <div class="feature-box">
+                <h3>Manage Accounts</h3>
+                <img class="feature-img" src="{{ url_for('static', filename='images/manage-account.jpg') }}" alt="Manage Accounts">
+                <p>Add, edit, or delete user accounts.</p>
+                <button class="btn" onclick="window.location.href='setting.html'">Manage Account</button>
+            </div>
+            <div class="feature-box">
+                <h3>Privacy</h3>
+                <img class="feature-img" src="{{ url_for('static', filename='images/privacy.jpg') }}" alt="Privacy">
+                <p>Control how your data is used and shared.</p>
+                <button class="btn" onclick="window.location.href='setting.html'">Control Privacy</button>
+            </div>
+            <div class="feature-box">
+                <h3>Data and Storage</h3>
+                <img class="feature-img" src="{{ url_for('static', filename='images/data.jpg') }}" alt="Data and Storage">
+                <p>Manage your traffic sign detection data and storage.</p>
+                <button class="btn" onclick="window.location.href='setting.html'">Open Files</button>
+            </div>
+            <div class="feature-box">
+                <h3>Avatar</h3>
+                <img class="feature-img" src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="Avatar">
+                <p>Customize your profile avatar.</p>
+                <button class="btn" onclick="window.location.href='setting.html'">Change Avatar</button>
+            </div>
+            <div class="feature-box">
+                <h3>Font</h3>
+                <img class="feature-img" src="{{ url_for('static', filename='images/fonts.jpg') }}" alt="Font">
+                <p>Choose your preferred font for the user interface.</p>
+                <button class="btn" onclick="window.location.href='setting.html'">Change Font</button>
+            </div>
+            <div class="feature-box">
+                <h3>Audio</h3>
+                <img class="feature-img" src="{{ url_for('static', filename='images/audio.jpg') }}" alt="Audio">
+                <p>Adjust the volume and other audio settings.</p>
+                <button class="btn" onclick="window.location.href='setting.html'">Manage Audio</button>
+            </div>
+            <div class="feature-box">
+                <h3>Theme</h3>
+                <img class="feature-img" src="{{ url_for('static', filename='images/theme.jpg') }}" alt="Theme">
+                <p>Change the color scheme of the user interface.</p>
+                <button class="btn" onclick="window.location.href='setting.html'">Change Theme</button>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Real-time Traffic Sign Detection for software project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

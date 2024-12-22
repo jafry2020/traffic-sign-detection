@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Traffic sign detection</title>
+    <style>
+        body {
+            background-color: #f6f6f6;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-image: url('/static/images/image1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+            .login-box h1 {
+                font-size: 36px;
+                font-weight: 400;
+                margin-bottom: 40px;
+                text-align: center;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+
+        .form-input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .login-btn {
+            display: block;
+            background-color: rgb(0,255, 0, 0.7);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+            .login-btn:hover {
+                background-color: #357e3d;
+            }
+
+        .warning-msg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            display: none;
+        }
+
+            .warning-msg p {
+                font-size: 24px;
+                color: #ffffff;
+                text-align: center;
+            }
+      /* Header */
+header {
+    background-color: rgba(253, 251, 251, 0.0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px; /* Adds comfortable spacing */
+    display: flex;
+    justify-content: space-between; /* Distributes items evenly */
+    align-items: center; /* Ensures vertical alignment */
+    background: rgba(255, 255, 255, 0.1); /* Adds subtle transparency for modern look */
+    border-radius: 15px; /* Smooth corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    backdrop-filter: blur(10px); /* Adds a glassmorphism effect */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect for nav */
+}
+
+/* Add hover effect for the entire navigation bar */
+nav:hover {
+    background: rgba(100, 62, 235, 0.2); /* Brightens background on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Deepens shadow for hover */
+}
+
+
+    nav ul {
+        list-style: none; /* Removes bullet points */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px; /* Adds spacing between menu items */
+        background: linear-gradient(90deg, #ffffff, #e3f2fd); /* Bright gradient for a modern feel */
+        padding: 15px 30px; /* Comfortable padding */
+        border-radius: 15px; /* Smooth rounded corners */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Individual list items */
+nav ul li a {
+    text-decoration: none; /* Removes underlines */
+    color: #000000; /* Bright and modern text color */
+    font-size: 16px; /* Clean and readable font size */
+    font-weight: 500;
+    padding: 10px 20px; /* Adds spacing for clickable areas */
+    border-radius: 12px; /* Rounded links for a modern look */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth hover animations */
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+    background: #caf0f8; /* Subtle light blue background on hover */
+    color: #b3b3b3; /* Darker blue text on hover for contrast */
+    transform: scale(1.1); /* Slight zoom for interactivity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for hover state */
+}
+
+/* Active link styling */
+nav ul li a.active {
+    background: #90e0ef; /* Highlight active link with light blue */
+    color: #023e8a; /* Contrasting darker text */
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Subtle depth for active link */
+}
+
+/* Add underline animation on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0077b6; /* Modern blue underline */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 15px; /* Adjust spacing for vertical layout */
+    }
+}
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="">Accounts</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <div class="login-box">
+        <h1 font-family:"Helvetica Neue">Login</h1>
+        <form id="login-form" action="homes">
+            <input type="text" id="username" name="username" class="form-input" placeholder="Username">
+            <input type="password" id="password" name="password" class="form-input" placeholder="Password">
+            <button type="submit" id="login-btn" class="login-btn" disabled>Login</button>
+        </form>
+    </div>
+
+    <div class="warning-msg">
+        <p>Incorrect login details</p>
+    </div>
+
+
+    <script>
+        const usernameInput = document.getElementById("username");
+        const passwordInput = document.getElementById("password");
+        const loginBtn = document.getElementById("login-btn");
+        const warningMsg = document.querySelector(".warning-msg");
+        const warningText = warningMsg.querySelector("p");
+
+        loginBtn.addEventListener("click", (event) => {
+            if (usernameInput.value !== "jeff" || passwordInput.value !== "1234") {
+                event.preventDefault();
+                warningMsg.style.display = "flex";
+                usernameInput.value = "";
+                passwordInput.value = "";
+                loginBtn.setAttribute("disabled", true);
+            }
+        });
+
+        usernameInput.addEventListener("input", () => {
+            if (usernameInput.value !== "" && passwordInput.value !== "") {
+                loginBtn.removeAttribute("disabled");
+            } else {
+                loginBtn.setAttribute("disabled", true);
+            }
+        });
+
+        passwordInput.addEventListener("input", () => {
+            if (usernameInput.value !== "" && passwordInput.value !== "") {
+                loginBtn.removeAttribute("disabled");
+            } else {
+                loginBtn.setAttribute("disabled", true);
+            }
+        });
+
+        warningMsg.addEventListener("click", () => {
+            warningMsg.style.display = "none";
+        });
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,3 @@
+open Login page
+	username = "jeff"
+	password = "1234"

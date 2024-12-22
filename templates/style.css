@@ -1,0 +1,379 @@
+/* Typography */
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background:  rgba(235, 230, 230, 0.1);;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background: #fff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    outline: none;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #007BFF;
+    background-color: #f0f8ff;
+}
+
+form input::placeholder,
+form select {
+    color: #aaa;
+    font-style: italic;
+}
+
+form input[type="number"],
+form input[type="text"] {
+    -moz-appearance: textfield;
+}
+
+form select {
+    padding: 0.8rem 1rem;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+form select:focus {
+    border-color: #007BFF;
+    background-color: #f0f8ff;
+}
+
+form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+form button:active {
+    background: #003f7f;
+    transform: scale(1);
+}
+
+/* Additional form enhancements */
+form .input-wrapper {
+    position: relative;
+}
+
+form .input-wrapper input,
+form .input-wrapper select {
+    padding-left: 2rem;
+}
+
+form .input-wrapper .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #007BFF;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 1.5rem;
+    }
+    
+    form input,
+    form select,
+    form button {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+body {
+    background-image: url('image1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 1.2;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)); /* Modern gradient shade */
+    padding: 15px 20px; /* Balanced padding for spacing */
+    display: inline-block; /* Ensures background fits the text */
+    border-radius: 10px; /* Softer, rounded edges */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Adds a modern shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+}
+
+/* Interactive hover effect */
+h1:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for hover */
+    background: linear-gradient(90deg, rgba(50, 50, 50, 0.8), rgba(0, 0, 0, 0.5)); /* Slightly darker gradient */
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 1.2;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Header */
+header {
+    background-color: rgba(253, 251, 251, 0.0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px; /* Adds comfortable spacing */
+    display: flex;
+    justify-content: space-between; /* Distributes items evenly */
+    align-items: center; /* Ensures vertical alignment */
+    background: rgba(255, 255, 255, 0.1); /* Adds subtle transparency for modern look */
+    border-radius: 15px; /* Smooth corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    backdrop-filter: blur(10px); /* Adds a glassmorphism effect */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect for nav */
+}
+
+/* Add hover effect for the entire navigation bar */
+nav:hover {
+    background: rgba(100, 62, 235, 0.2); /* Brightens background on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Deepens shadow for hover */
+}
+
+
+    nav ul {
+        list-style: none; /* Removes bullet points */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px; /* Adds spacing between menu items */
+        background: linear-gradient(90deg, #ffffff, #e3f2fd); /* Bright gradient for a modern feel */
+        padding: 15px 30px; /* Comfortable padding */
+        border-radius: 15px; /* Smooth rounded corners */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Individual list items */
+nav ul li a {
+    text-decoration: none; /* Removes underlines */
+    color: #000000; /* Bright and modern text color */
+    font-size: 16px; /* Clean and readable font size */
+    font-weight: 500;
+    padding: 10px 20px; /* Adds spacing for clickable areas */
+    border-radius: 12px; /* Rounded links for a modern look */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth hover animations */
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+    background: #caf0f8; /* Subtle light blue background on hover */
+    color: #b3b3b3; /* Darker blue text on hover for contrast */
+    transform: scale(1.1); /* Slight zoom for interactivity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for hover state */
+}
+
+/* Active link styling */
+nav ul li a.active {
+    background: #90e0ef; /* Highlight active link with light blue */
+    color: #023e8a; /* Contrasting darker text */
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Subtle depth for active link */
+}
+
+/* Add underline animation on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0077b6; /* Modern blue underline */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 15px; /* Adjust spacing for vertical layout */
+    }
+}
+    /* nav a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+        nav a.active,
+        nav a:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        } */
+
+/* Hero */
+.hero {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.5); /* Subtle transparency */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+    border-radius: 50px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transitions */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+/* Hover effect */
+.feature-box:hover {
+    transform: translateY(-10px) scale(1.05); /* Slight lift and scale effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow for hover */
+    background: rgba(255, 255, 255, 0.7); /* Lighten background on hover */
+}
+
+.feature-img {
+    width: 100%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+.feature-box:hover img {
+    transform: scale(1.04); /* Slight zoom for images/icons */
+}
+
+/* CTA */
+.cta {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+    .cta h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 255, 0.3);
+    color: #333;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .btn:hover {
+        background-color: #f9f9f9;
+    }
+
+/* Footer */
+footer {
+    background-color: rgb(255, 255, 255,0.5);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+    footer p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }

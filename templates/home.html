@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time Traffic Sign Detection</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="setting">Settings</a></li>
+                <li><a href="account">Accounts</a></li>
+                <li><a href="log">Logs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Real-time Traffic Sign Detection</h1>
+                <p>Helping drivers stay safe on the road</p>
+            </div>
+        </section>
+        <section class="features">
+            <div class="feature-box">
+                <img src="{{ url_for('static', filename='images/feature1.jpg') }}" alt="Feature 1" class="feature-img">
+                <h3>Real-time Detection</h3>
+                <p>Get instant notifications for traffic signs on the road.</p>
+            </div>
+            <div class="feature-box">
+                <img src="{{ url_for('static', filename='images/feature2.jpg') }}" alt="Feature 2" class="feature-img">
+                <h3>Intuitive Interface</h3>
+                <p>Easy-to-use interface that anyone can navigate.</p>
+            </div>
+            <div class="feature-box">
+                <img src="{{ url_for('static', filename='images/feature3.jpg') }}" alt="Feature 3" class="feature-img">
+                <h3>Customizable Settings</h3>
+                <p>Personalize the app according to your needs and preferences.</p>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2023 Real-time Traffic Sign Detection for software project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
